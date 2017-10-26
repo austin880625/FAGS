@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Structure of Abelian Finite Groups</title>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+                <h1>Structure of Abelian Finite Groups</h1>
+                <p>Please enter $m$ to examine the stucture of $\mathbb{Z}^{\times}_{m}$</p>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" id="m" class="form-control">
+                    </div>
+                    <button class="btn" onclick="solve()" class="form-control">Evaluate!</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div id="solution" style="display:none;">
+                    <div id="factorization_block">
+                        <p>The order of the group <span class="group_name"></span> is <span id="group_order"></span>,</p>
+                        <p>and the order of <span id="group_power_n"></span> is below:</p>
+                        <div id="group_power"></div>
+                        <h2>Factorization</h2>
+                        <div id="factorization"></div>
+                        <p>Therefore the possible structures of <span class="group_name"></span> can be:</p>
+                        <div id="possible_structures"></div>
+                    </div>
+                    <div id="verification_block">
+                        <h2>Verifications</h2>
+                        <p>Now determine whether each $G_{i}$ isomorphism with <span class="group_name"></span>
+                        <div id="verification"></div>
+                    </div>
+                    <div id="solution_block">
+                        <h2>Solutions</h2>
+                        <p>Therefore <span class="group_name"></span> is isomorphism with </p>
+                        <div id="isomorphism"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row fd-footer">
+            <div class="col-md-12 col-xs-12">
+                <p class="text-muted">This webpage is developed by Austin Chang and the source code has been published on Github .</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
