@@ -198,7 +198,7 @@ function solve(){
     document.getElementById("isomorphism").innerHTML = "\\(G_{" + isomorphism.toString() + "}=" + makeGroup(isomorphism) + "\\)";
 
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    document.getElementById("solution").style = "display:none";
+    document.getElementById("solution").style = "display:block";
 }
 
 if(document.getElementById("m")){
